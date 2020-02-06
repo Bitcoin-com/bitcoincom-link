@@ -1,4 +1,4 @@
-export { hasMobileProvider } from './core/messages';
+export { hasMobileProvider, hasAndroidProvider, hasIosProvider, } from './core/messages';
 import getAddress from './methods/getAddress';
 import sendAssets from './methods/sendAssets';
 import payInvoice from './methods/payInvoice';

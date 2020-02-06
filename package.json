@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/bitcoin-com/bitcoin-wallet-api/issues"
   },
-  "homepage": "https://github.com/bitcoin-com/bitcoin-wallet-api#readme",
+  "homepage": "https://developer.bitcoin.com/wallet-api",
   "devDependencies": {
     "@types/lodash-es": "^4.17.3",
     "ts-loader": "^6.2.1",

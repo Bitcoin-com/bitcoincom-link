@@ -90,12 +90,14 @@ export function sendMessage({
 }
 
 export function hasMobileProvider(): boolean {
-   // android
-    const messageHandler = isBrowser && get(window, 'window._bitcoinWalletApi.messageHandler');
+    return Boolean(hasAndroidProvider() || hasIosProvider());
+}
 
-    // ios
-    const webkitPostMessage = isBrowser && get(window, 'window.webkit.messageHandlers.sendMessageHandler.postMessage');
-    const isIOS = Boolean(webkitPostMessage) && typeof webkitPostMessage === 'function';
+export function hasAndroidProvider(): boolean {
+  return Boolean(isBrowser && get(window, 'window._bitcoinWalletApi.messageHandler'));
+}
 
-    return Boolean(messageHandler || isIOS);
+export function hasIosProvider(): boolean {
+  const webkitPostMessage = isBrowser && get(window, 'window.webkit.messageHandlers.sendMessageHandler.postMessage');
+  return Boolean(webkitPostMessage) && typeof webkitPostMessage === 'function';
 }
