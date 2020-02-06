@@ -6,15 +6,15 @@ In a browser - cdn [![](https://data.jsdelivr.com/v1/package/npm/bitcoin-wallet-
 
 Install via npm [![npm version](https://badge.fury.io/js/bitcoin-wallet-api.svg)](https://badge.fury.io/js/bitcoin-wallet-api)
 
-### [Sites using wallet api](docs/sites.md)
+### [Getting started](https://developer.bitcoin.com/wallet-api/)
 
 ## Method definitions
 Standard protocol being defined as [BDIP-3](https://github.com/nickfujita/BDIPs/blob/wallet-api/BDIPs/bdip-3.md)
 
-- [getAddress](/docs/methods/getAddress.md)
-- [sendAssets](/docs/methods/sendAssets.md)
-- [payInvoice](/docs/methods/payInvoice.md)
-- [createToken](/docs/methods/createToken.md)
+- [getAddress](https://developer.bitcoin.com/wallet-api/docs/get-address)
+- [sendAssets](https://developer.bitcoin.com/wallet-api/docs/send-assets)
+- [payInvoice](https://developer.bitcoin.com/wallet-api/docs/pay-invoice)
+- [createToken](https://developer.bitcoin.com/wallet-api/docs/create-token)
 
 ### [Development](/docs/walletApiDevelopment.md)
 
