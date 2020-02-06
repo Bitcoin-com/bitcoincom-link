@@ -9,7 +9,7 @@ Install via npm [![npm version](https://badge.fury.io/js/bitcoin-wallet-api.svg)
 ### [Getting started](https://developer.bitcoin.com/wallet-api/)
 
 ## Method definitions
-Standard protocol being defined as [BDIP-3](https://github.com/nickfujita/BDIPs/blob/wallet-api/BDIPs/bdip-3.md)
+Standard protocol being defined as [BDIP-3](https://github.com/Bitcoin-com/BDIPs/blob/master/BDIPs/bdip-3.md)
 
 - [getAddress](https://developer.bitcoin.com/wallet-api/docs/get-address)
 - [sendAssets](https://developer.bitcoin.com/wallet-api/docs/send-assets)
