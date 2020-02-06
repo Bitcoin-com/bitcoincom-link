@@ -1,0 +1,38 @@
+{
+  "name": "bitcoin-wallet-api",
+  "version": "0.1.0",
+  "description": "",
+  "main": "./lib/bitcoin-wallet-api.min.js",
+  "types": "./lib/index.d.ts",
+  "scripts": {
+    "start": "webpack --mode development --watch",
+    "build": "webpack --mode development",
+    "build-dist": "webpack --mode production --env.DISTRIBUTION=true",
+    "dist": "yarn build-dist && yarn fix-bitcore",
+    "fix-bitcore": "sed -i '' 's/i.versionGuard(t._bitcoreCash),//g' lib/bitcoin-wallet-api.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bitcoin-com/bitcoin-wallet-api.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/bitcoin-com/bitcoin-wallet-api/issues"
+  },
+  "homepage": "https://github.com/bitcoin-com/bitcoin-wallet-api#readme",
+  "devDependencies": {
+    "@types/lodash-es": "^4.17.3",
+    "ts-loader": "^6.2.1",
+    "tslint": "^5.20.1",
+    "tslint-loader": "^3.5.4",
+    "typescript": "^3.7.2",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  },
+  "dependencies": {
+    "bchaddrjs-slp": "^0.2.8",
+    "bignumber.js": "^9.0.0",
+    "lodash-es": "^4.17.15",
+    "slpjs": "^0.23.0"
+  }
+}

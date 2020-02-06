@@ -1,0 +1,1 @@
+{"version":3,"file":"payInvoice.d.ts","sourceRoot":"","sources":["../../../src/web4bch/methods/payInvoice.ts"],"names":[],"mappings":"AAGA,UAAU,eAAe;IACvB,GAAG,EAAE,MAAM,CAAC;CACb;AAED,UAAU,gBAAgB;IACxB,IAAI,EAAE,MAAM,CAAC;CACd;AAED,MAAM,CAAC,OAAO,UAAU,UAAU,CAAC,EAAE,GAAG,EAAE,EAAE,eAAe,GAAG,OAAO,CAAC,gBAAgB,CAAC,CAyBtF"}
