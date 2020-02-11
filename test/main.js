@@ -8,6 +8,7 @@ const sendAssetsToAddressEle = document.getElementById("sendAssetsToAddress");
 const sendAssetsProtocolEle = document.getElementById("sendAssetsProtocol");
 const sendAssetsValueEle = document.getElementById("sendAssetsValue");
 const sendAssetsAssetIdEle = document.getElementById("sendAssetsAssetId");
+const sendAssetsOpReturnEle = document.getElementById('sendAssetsOpReturn');
 
 const payInvoiceUrlEle = document.getElementById("payInvoiceUrl");
 
@@ -63,6 +64,7 @@ function sendAssets() {
       to: sendAssetsToAddressEle.value,
       protocol: sendAssetsProtocolEle.value,
       value: sendAssetsValueEle.value,
+      opReturn: JSON.parse(sendAssetsOpReturnEle.value),
     };
     if (sendAssetsProtocolEle.value === 'SLP') {
       sendAssetArgs.assetId = sendAssetsAssetIdEle.value;
