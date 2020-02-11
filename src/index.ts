@@ -1,6 +1,6 @@
 declare const web4bch: any;
-import web4bchMethods from './web4bch';
-import { METHOD } from './constants';
+import web4bchMethods, { getBadgerStatus } from './web4bch';
+import { METHOD, ProviderStatus } from './constants';
 import {
   hasMobileProvider,
   mobileMethods,
@@ -26,9 +26,9 @@ function checkProvider(methodName: METHOD) {
 
 function getProviderStatus() {
   return {
-    badger: Boolean(web4bch),
-    android: hasAndroidProvider(),
-    ios: hasIosProvider(),
+    badger: getBadgerStatus(),
+    android: hasAndroidProvider() ? ProviderStatus.AVAILABLE : ProviderStatus.NOT_AVAILABLE,
+    ios: hasIosProvider() ? ProviderStatus.AVAILABLE : ProviderStatus.NOT_AVAILABLE,
   };
 }
 

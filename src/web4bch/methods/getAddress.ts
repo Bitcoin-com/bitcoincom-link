@@ -25,19 +25,24 @@ export default function getAccount({ protocol }: GetAccountInput): Promise<GetAc
 
   web4bch = new Web4Bch(web4bch.currentProvider);
 
+  let address: string;
   switch (protocol) {
     case PROTOCOL.BCH:
-      return Promise.resolve({
-        address: web4bch.bch.defaultAccount,
-      });
+      address = web4bch.bch.defaultAccount;
+      break;
     case PROTOCOL.SLP:
-      return Promise.resolve({
-        address: web4bch.bch.defaultSlpAccount,
-      });
+      break;
+      address = web4bch.bch.defaultSlpAccount;
     default:
       return Promise.reject({
         type: 'PROTOCOL_ERROR',
-        description: 'The provided protocol is not supported by this wallet.',
+        description: 'The provided protocol is not supported by this wallet.'
       });
   }
+  return address
+    ? Promise.resolve({ address })
+    : Promise.reject({
+        type: 'CONNECTION_DENIED',
+        description: 'User not logged into wallet.'
+      });
 }

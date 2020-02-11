@@ -1,7 +1,8 @@
+import { ProviderStatus } from './constants';
 declare function getProviderStatus(): {
-    badger: boolean;
-    android: boolean;
-    ios: boolean;
+    badger: ProviderStatus;
+    android: ProviderStatus;
+    ios: ProviderStatus;
 };
 declare const _default: {
     getProviderStatus: typeof getProviderStatus;
