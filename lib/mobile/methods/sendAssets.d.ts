@@ -8,6 +8,7 @@ interface SendAssetsInput {
     protocol: PROTOCOL;
     assetId?: string;
     value: string;
+    opReturn?: string[];
 }
 interface SendAssetsOutput {
     txid: string;

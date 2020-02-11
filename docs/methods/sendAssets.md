@@ -16,6 +16,7 @@ interface SendAssetsInput {
   protocol: string; // BCH/SLP/BTC or any future protocol
   assetId?: string; // Optional in the case of BCH or BTC. Required in the case of SLP, and will be token id
   value: string; // The amount of coins or assets to be sent, in user readable decimal format (eg. "0.000123")
+  opReturn?: string[]; // arbitrary op return to attach to transaction
 }
 ```
 
@@ -81,6 +82,7 @@ sendAssets({
 
 - Validate the input parameters to make sure that the address provided is valid, and that it matches the provided protocol.
 - Present the request to the user, and allow them to pick from which of their accounts they would like to send the funds (for some wallets they may only have a single account)
+- In the case that the optional OP_RETURN argument is supplied by the client, it will be up to the discretion of the wallet provider to display a warning message that the OP_RETURN value is not a known protcol. In the case that the OP_RETURN value matches a known protocol, it's is suggested that the wallet provider format the value into it's human readable form according to the known protocol spec.
 - If the user accepts the transaction, sign & broadcast the transaction, then return the transaction id to the app.
   - The transaction does not have any input UTXO requirements, other than having enough funds to sucessfully match it's outputs
   - BCH/BTC transactions should have at least 1 UTXO output, for the specified input amount and specified address. Any additionaly UTXO outputs for the remaining input amounts are to be determined by the wallet provider, including the fee.

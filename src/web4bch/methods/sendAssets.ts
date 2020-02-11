@@ -13,10 +13,24 @@ interface SendAssetsInput {
   protocol: PROTOCOL; // BCH/SLP/BTC or any future protocol
   assetId?: string; // Optional in the case of BCH or BTC. Required in the case of SLP, and will be token id
   value: string; // The amount of coins or assets to be sent
+  opReturn?: string[]; // arbitrary op return to attach to transaction
 }
 
 interface SendAssetsOutput {
   txid: string; // Transaction id of the sent assets
+}
+
+interface TxParams {
+  to: string;
+  from: string;
+  value?: string;
+  opReturn?: {
+    data: string[],
+  },
+  sendTokenData?: {
+    tokenId: string,
+    tokenProtocol: string,
+  },
 }
 
 export default function sendAssets({
@@ -24,6 +38,7 @@ export default function sendAssets({
   protocol,
   value,
   assetId,
+  opReturn,
 }: SendAssetsInput): Promise<SendAssetsOutput> {
   if (typeof web4bch === 'undefined') {
     return Promise.reject({
@@ -33,19 +48,15 @@ export default function sendAssets({
 
   web4bch = new Web4Bch(web4bch.currentProvider);
 
-  const txParams = {
-   to,
-   value: undefined,
-   from: undefined,
-   sendTokenData: undefined,
- };
+  const txParams: TxParams = {
+    to,
+    from: web4bch.bch.defaultAccount,
+  };
   switch (protocol) {
     case PROTOCOL.BCH:
-      txParams.from = web4bch.bch.defaultAccount;
-      txParams.value = fromFixed(value, 8);
+      txParams.value = fromFixed(value, 8).toString();
       break;
     case PROTOCOL.SLP:
-      txParams.from = web4bch.bch.defaultAccount;
       txParams.value = value;
       txParams.sendTokenData = {
         tokenId: assetId,
@@ -57,6 +68,10 @@ export default function sendAssets({
         type: 'PROTOCOL_ERROR',
         description: 'The provided protocol is not supported by this wallet.',
       });
+  }
+
+  if (opReturn) {
+    txParams.opReturn = { data: opReturn };
   }
 
   return new Promise((resolve, reject) => {

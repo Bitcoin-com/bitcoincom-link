@@ -12,6 +12,7 @@ interface SendAssetsInput {
   protocol: PROTOCOL; // BCH/SLP/BTC or any future protocol
   assetId?: string; // Optional in the case of BCH or BTC. Required in the case of SLP, and will be token id
   value: string; // The amount of coins or assets to be sent
+  opReturn?: string[]; // arbitrary op return to attach to transaction
 }
 
 interface SendAssetsOutput {
