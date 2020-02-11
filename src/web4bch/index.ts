@@ -12,7 +12,7 @@ function isBadgerLoggedIn() {
   }
 
   web4bch = new Web4Bch(web4bch.currentProvider);
-  return Boolean(web4bch.bch.defaultAddress);
+  return Boolean(web4bch.bch.defaultAccount);
 }
 
 export function getBadgerStatus() {
