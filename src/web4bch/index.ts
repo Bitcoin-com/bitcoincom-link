@@ -4,7 +4,7 @@ import getAddress from './methods/getAddress';
 import sendAssets from './methods/sendAssets';
 import payInvoice from './methods/payInvoice';
 import createToken from './methods/createToken';
-import { ProviderStatus } from '../constants';
+import { WalletProviderStatus } from '../constants';
 
 function isBadgerLoggedIn() {
   if (typeof web4bch === 'undefined') {
@@ -17,9 +17,9 @@ function isBadgerLoggedIn() {
 
 export function getBadgerStatus() {
   if (typeof web4bch === 'undefined') {
-    return ProviderStatus.NOT_AVAILABLE;
+    return WalletProviderStatus.NOT_AVAILABLE;
   }
-  return isBadgerLoggedIn() ? ProviderStatus.LOGGED_IN : ProviderStatus.AVAILABLE;
+  return isBadgerLoggedIn() ? WalletProviderStatus.LOGGED_IN : WalletProviderStatus.AVAILABLE;
 }
 
 export default {

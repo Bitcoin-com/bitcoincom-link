@@ -1,11 +1,14 @@
-import { ProviderStatus } from './constants';
-declare function getProviderStatus(): {
-    badger: ProviderStatus;
-    android: ProviderStatus;
-    ios: ProviderStatus;
+import { WalletProviderStatus } from './constants';
+declare function getWalletProviderStatus(): {
+    badger: WalletProviderStatus;
+    android: WalletProviderStatus;
+    ios: WalletProviderStatus;
 };
 declare const _default: {
-    getProviderStatus: typeof getProviderStatus;
+    getWalletProviderStatus: typeof getWalletProviderStatus;
+    constants: {
+        WalletProviderStatus: typeof WalletProviderStatus;
+    };
 };
 export default _default;
 //# sourceMappingURL=index.d.ts.map

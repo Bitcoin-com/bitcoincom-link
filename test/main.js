@@ -121,4 +121,4 @@ function syntaxHighlight(json) {
     });
 }
 
-console.log(bitcoinWalletApi.getProviderStatus());
+console.log(bitcoinWalletApi.getWalletProviderStatus());

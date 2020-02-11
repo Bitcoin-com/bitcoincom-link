@@ -1,6 +1,6 @@
 declare const web4bch: any;
 import web4bchMethods, { getBadgerStatus } from './web4bch';
-import { METHOD, ProviderStatus } from './constants';
+import { METHOD, WalletProviderStatus } from './constants';
 import {
   hasMobileProvider,
   mobileMethods,
@@ -24,11 +24,11 @@ function checkProvider(methodName: METHOD) {
   };
 }
 
-function getProviderStatus() {
+function getWalletProviderStatus() {
   return {
     badger: getBadgerStatus(),
-    android: hasAndroidProvider() ? ProviderStatus.AVAILABLE : ProviderStatus.NOT_AVAILABLE,
-    ios: hasIosProvider() ? ProviderStatus.AVAILABLE : ProviderStatus.NOT_AVAILABLE,
+    android: hasAndroidProvider() ? WalletProviderStatus.AVAILABLE : WalletProviderStatus.NOT_AVAILABLE,
+    ios: hasIosProvider() ? WalletProviderStatus.AVAILABLE : WalletProviderStatus.NOT_AVAILABLE,
   };
 }
 
@@ -41,5 +41,8 @@ const coreMethods = Object.keys(METHOD)
 
 export default {
   ...coreMethods,
-  getProviderStatus,
+  getWalletProviderStatus,
+  constants: {
+    WalletProviderStatus,
+  },
 };
