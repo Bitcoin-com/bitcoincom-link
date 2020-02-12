@@ -22,17 +22,15 @@
   "homepage": "https://developer.bitcoin.com/wallet-api",
   "devDependencies": {
     "@types/lodash-es": "^4.17.3",
+    "@types/node": "^13.7.1",
     "ts-loader": "^6.2.1",
     "tslint": "^5.20.1",
     "tslint-loader": "^3.5.4",
-    "typescript": "^3.7.2",
+    "typescript": "^3.7.5",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10"
   },
   "dependencies": {
-    "bchaddrjs-slp": "^0.2.8",
-    "bignumber.js": "^9.0.0",
-    "lodash-es": "^4.17.15",
-    "slpjs": "^0.23.0"
+    "bignumber.js": "^9.0.0"
   }
 }

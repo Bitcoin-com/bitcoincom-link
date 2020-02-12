@@ -43,6 +43,6 @@ export default function getAccount({ protocol }: GetAccountInput): Promise<GetAc
     ? Promise.resolve({ address })
     : Promise.reject({
         type: 'CONNECTION_DENIED',
-        description: 'User not logged into wallet.'
+        description: 'User not logged into wallet.',
       });
 }

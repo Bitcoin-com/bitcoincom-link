@@ -26,11 +26,11 @@ interface TxParams {
   value?: string;
   opReturn?: {
     data: string[],
-  },
+  };
   sendTokenData?: {
     tokenId: string,
     tokenProtocol: string,
-  },
+  };
 }
 
 export default function sendAssets({

@@ -1,8 +1,7 @@
 declare let web4bch: any;
 declare let Web4Bch: any;
 import BigNumber from 'bignumber.js';
-import * as slpjs from 'slpjs';
-import * as bchaddr from 'bchaddrjs-slp';
+import { buildGenesisOpReturn, isSlpAddress } from '../../utils';
 
 interface CreateTokenInput {
   name: string; // token name
@@ -44,7 +43,7 @@ export default function createToken({
     });
   }
 
-  if (!bchaddr.isSlpAddress(tokenReceiverAddress)) {
+  if (!isSlpAddress(tokenReceiverAddress)) {
     return Promise.reject({
       type: 'MALFORMED_INPUT',
       description: 'tokenReceiverAddress should be an slp address',
@@ -54,10 +53,11 @@ export default function createToken({
   web4bch = new Web4Bch(web4bch.currentProvider);
 
   const initialSupplySatoshis = new BigNumber(Number(initialSupply)).times(10 ** decimals);
-  const encodedData = slpjs.Slp.buildGenesisOpReturn({
+  const encodedData = buildGenesisOpReturn({
     ticker: symbol,
     name: name,
     documentUri: documentUri,
+    // tslint:disable-next-line: triple-equals
     hash: documentHash != null ? Buffer.from(documentHash, 'utf-8') : null,
     decimals: Number(decimals),
     batonVout: batonReceiverAddress ? 2 : null,

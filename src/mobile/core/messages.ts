@@ -1,7 +1,6 @@
 declare const window: any;
 declare const global: any;
 declare const _bitcoinWalletApi: any;
-import { get } from 'lodash-es';
 import { Message, IncomingMessage, SendMessageArgs } from './types';
 import { NO_PROVIDER, REQUEST_TIMEOUT } from '../../constants';
 
@@ -52,10 +51,10 @@ export function sendMessage({
   return new Promise((resolve, reject) => {
 
     // android
-    const messageHandler = isBrowser && get(window, 'window._bitcoinWalletApi.messageHandler');
+    const messageHandler = isBrowser && window?._bitcoinWalletApi?.messageHandler;
 
     // ios
-    const webkitPostMessage = isBrowser && get(window, 'window.webkit.messageHandlers.sendMessageHandler.postMessage');
+    const webkitPostMessage = isBrowser && window?.webkit?.messageHandlers?.sendMessageHandler?.postMessage;
     const isIOS = Boolean(webkitPostMessage) && typeof webkitPostMessage === 'function';
 
     if (messageHandler) {
@@ -94,10 +93,10 @@ export function hasMobileProvider(): boolean {
 }
 
 export function hasAndroidProvider(): boolean {
-  return Boolean(isBrowser && get(window, 'window._bitcoinWalletApi.messageHandler'));
+  return Boolean(isBrowser && window?._bitcoinWalletApi?.messageHandler);
 }
 
 export function hasIosProvider(): boolean {
-  const webkitPostMessage = isBrowser && get(window, 'window.webkit.messageHandlers.sendMessageHandler.postMessage');
+  const webkitPostMessage = isBrowser && window?.webkit?.messageHandlers?.sendMessageHandler?.postMessage;
   return Boolean(webkitPostMessage) && typeof webkitPostMessage === 'function';
 }
