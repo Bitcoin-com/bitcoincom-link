@@ -31,12 +31,12 @@ export default function getAccount({ protocol }: GetAccountInput): Promise<GetAc
       address = web4bch.bch.defaultAccount;
       break;
     case PROTOCOL.SLP:
-      break;
       address = web4bch.bch.defaultSlpAccount;
+      break;
     default:
       return Promise.reject({
         type: 'PROTOCOL_ERROR',
-        description: 'The provided protocol is not supported by this wallet.'
+        description: 'The provided protocol is not supported by this wallet.',
       });
   }
   return address
