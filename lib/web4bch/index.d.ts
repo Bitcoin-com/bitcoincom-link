@@ -3,6 +3,7 @@ import sendAssets from './methods/sendAssets';
 import payInvoice from './methods/payInvoice';
 import createToken from './methods/createToken';
 import { WalletProviderStatus } from '../constants';
+export declare function hasWeb4BchProvider(): boolean;
 export declare function getBadgerStatus(): WalletProviderStatus;
 declare const _default: {
     getAddress: typeof getAddress;

@@ -6,8 +6,12 @@ import payInvoice from './methods/payInvoice';
 import createToken from './methods/createToken';
 import { WalletProviderStatus } from '../constants';
 
+export function hasWeb4BchProvider() {
+  return typeof web4bch !== 'undefined';
+}
+
 function isBadgerLoggedIn() {
-  if (typeof web4bch === 'undefined') {
+  if (!hasWeb4BchProvider()) {
     return false;
   }
 

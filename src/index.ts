@@ -1,5 +1,5 @@
 declare const web4bch: any;
-import web4bchMethods, { getBadgerStatus } from './web4bch';
+import web4bchMethods, { getBadgerStatus, hasWeb4BchProvider } from './web4bch';
 import { METHOD, WalletProviderStatus } from './constants';
 import {
   hasMobileProvider,
@@ -10,7 +10,7 @@ import {
 
 function checkProvider(methodName: METHOD) {
   return args => {
-    if (web4bch !== undefined) {
+    if (hasWeb4BchProvider()) {
       return web4bchMethods[methodName](args);
     }
 
