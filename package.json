@@ -1,6 +1,6 @@
 {
   "name": "bitcoin-wallet-api",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "",
   "main": "./lib/bitcoin-wallet-api.min.js",
   "types": "./lib/index.d.ts",
