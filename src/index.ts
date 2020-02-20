@@ -15,7 +15,7 @@ function checkProvider(methodName: METHOD) {
     }
 
     if (hasMobileProvider()) {
-      mobileMethods[methodName](args);
+      return mobileMethods[methodName](args);
     }
 
     return Promise.reject({
