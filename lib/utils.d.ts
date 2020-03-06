@@ -12,5 +12,6 @@ interface ConfigBuildGenesisOpReturn {
 }
 export declare function buildGenesisOpReturn(config: ConfigBuildGenesisOpReturn, type?: number): Buffer;
 export declare function isSlpAddress(address: string): boolean;
+export declare function getWebsiteMetadata(): any;
 export {};
 //# sourceMappingURL=utils.d.ts.map

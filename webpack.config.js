@@ -7,7 +7,7 @@ module.exports = (env) => {
   const DISTRIBUTION = env && env.DISTRIBUTION === 'true';
   return {
     resolve: {
-      extensions: ['.ts', '.js'],
+      extensions: ['.ts', '.js', '.json'],
     },
     entry: ['./src/index'],
     module: {

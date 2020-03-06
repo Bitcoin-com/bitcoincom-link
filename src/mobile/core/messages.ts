@@ -3,6 +3,7 @@ declare const global: any;
 declare const _bitcoinWalletApi: any;
 import { Message, IncomingMessage, SendMessageArgs } from './types';
 import { NO_PROVIDER, REQUEST_TIMEOUT } from '../../constants';
+import { getWebsiteMetadata } from '../../utils';
 
 const messageQueue = {};
 
@@ -46,6 +47,7 @@ export function sendMessage({
     messageId,
     command,
     data,
+    websiteMetadata: getWebsiteMetadata(),
   };
 
   return new Promise((resolve, reject) => {

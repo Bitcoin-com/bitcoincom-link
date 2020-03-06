@@ -1,4 +1,5 @@
 import BigNumber from 'bignumber.js';
+import { getMetadata, metadataRuleSets } from 'page-metadata-parser';
 
 export function fromFixed(number: string, decimals: number): number {
   return Number((Number(number) * Math.pow(10, decimals)).toString().split('.')[0]);
@@ -209,4 +210,36 @@ function encodeScript(script: (number | number[])[]) {
 export function isSlpAddress(address: string): boolean {
   const addressRegex = new RegExp('^(simpleledger:|slptest:|slpreg:)?(q|p)[a-z0-9]{41}$');
   return addressRegex.test(address);
+}
+
+const customDescriptionRuleSet = {
+  ...metadataRuleSets.description,
+  rules: [
+    ...metadataRuleSets.description.rules,
+    ['meta[name="twitter:description"]', element => element.getAttribute('content')],
+    ['meta[property="twitter:description"]', element => element.getAttribute('content')],
+    ['meta[itemprop="description"]', element => element.getAttribute('content')],
+    ['description', element => element.text],
+  ],
+};
+
+const customImageRuleSet = {
+  ...metadataRuleSets.image,
+  rules: [
+    ...metadataRuleSets.image.rules,
+    ['meta[name="twitter:image:src"]', element => element.getAttribute('content')],
+    ['meta[property="twitter:image:src"]', element => element.getAttribute('content')],
+    ['meta[name="image"]', element => element.getAttribute('content')],
+    ['meta[itemprop="image"]', element => element.getAttribute('content')],
+  ],
+};
+
+export function getWebsiteMetadata() {
+  const location = window?.location;
+  const document = window?.document;
+  return getMetadata(document, location, {
+    title: metadataRuleSets.title,
+    description: customDescriptionRuleSet,
+    image: customImageRuleSet,
+  });
 }

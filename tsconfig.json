@@ -8,8 +8,5 @@
     "rootDir": "./src",
     "outDir": "./lib"
   },
-  "include": ["src/**/*"],
-  "atom": {
-    "rewriteTsconfig": true
-  }
+  "include": ["src/**/*"]
 }

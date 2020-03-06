@@ -31,6 +31,7 @@
     "webpack-cli": "^3.3.10"
   },
   "dependencies": {
-    "bignumber.js": "^9.0.0"
+    "bignumber.js": "^9.0.0",
+    "page-metadata-parser": "^1.1.4"
   }
 }

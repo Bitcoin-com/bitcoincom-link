@@ -1633,11 +1633,6 @@ locate-path@^3.0.0:
     p-locate "^3.0.0"
     path-exists "^3.0.0"
 
-lodash-es@^4.17.15:
-  version "4.17.15"
-  resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.15.tgz#21bd96839354412f23d7a10340e5eac6ee455d78"
-  integrity sha512-rlrc3yU3+JNOpZ9zj5pQtxnx2THmvRykwL4Xlxoa8I9lHBlVbbyPhgyPMioxVZ4NqyxaVVtaJnzsyOidQIhyyQ==
-
 lru-cache@^5.1.1:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-5.1.1.tgz#1da27e6710271947695daf6848e847f01d84b920"
@@ -2087,6 +2082,11 @@ p-try@^2.0.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/p-try/-/p-try-2.2.0.tgz#cb2868540e313d61de58fafbe35ce9004d5540e6"
   integrity sha512-R4nPAVTAU0B9D35/Gk3uJf/7XYbQcyohSKdvAxIRSNghFl4e71hVoGnBNQz9cWaXxO2I10KTC+3jMdvvoKw6dQ==
+
+page-metadata-parser@^1.1.4:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/page-metadata-parser/-/page-metadata-parser-1.1.4.tgz#52cea38eb6d084d1808a10abb659ee8e9233bd4d"
+  integrity sha512-TbPNw7GddbHs4c2DyYinFvh51BVsaMfdrweeylzGlg8qeuzALGxq2NF+6jbmeKc7DnU2BZRDOuWNnEjDwUSqRQ==
 
 pako@~1.0.5:
   version "1.0.10"

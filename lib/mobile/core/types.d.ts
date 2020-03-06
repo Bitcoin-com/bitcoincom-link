@@ -2,6 +2,7 @@ export interface Message {
     messageId: string;
     command: string;
     data?: any;
+    websiteMetadata: any;
 }
 export interface IncomingMessage extends Message {
     error?: Error;
