@@ -1,6 +1,6 @@
 # Mobile wallet provider integrations
 
-The bitcoin wallet api package allows for integrations into mobile webviews in Android and iOS applications. The following details the method for communication for each platform, and the interface to facilitate client interactions.
+The Bitcoin.com Link package allows for integrations into mobile webviews in Android and iOS applications. The following details the method for communication for each platform, and the interface to facilitate client interactions.
 
 All interactions between the client web application and the wallet provider are async. Requests from the web app will be sent across to the wallet provider using the provided webview to native app interface, and will expect the request to be fulfiled or rejected based on input from the user.
 

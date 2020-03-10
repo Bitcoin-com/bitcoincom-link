@@ -30,9 +30,9 @@ module.exports = (env) => {
     devtool: !DISTRIBUTION && 'inline-source-map',
     output: {
       path: path.join(__dirname, DISTRIBUTION ? 'lib' : 'build'),
-      filename: DISTRIBUTION ? 'bitcoin-wallet-api.min.js' : 'bundle.js',
+      filename: DISTRIBUTION ? 'bitcoincom-link.min.js' : 'bundle.js',
       libraryTarget: "umd",
-      library: 'bitcoinWalletApi',
+      library: 'bitcoincomLink',
       libraryExport: 'default',
       globalObject: 'typeof self !== \'undefined\' ? self : this',
     },

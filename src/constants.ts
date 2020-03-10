@@ -5,7 +5,7 @@ export enum METHOD {
   createToken = 'createToken',
 }
 
-export const NO_PROVIDER = { type: 'NO_PROVIDER', description: 'Bitcoin wallet api provider not found.' };
+export const NO_PROVIDER = { type: 'NO_PROVIDER', description: 'Bitcoin.com Link provider not found.' };
 
 export const REQUEST_TIMEOUT = {
   type: 'REQUEST_TIMEOUT',

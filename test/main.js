@@ -50,7 +50,7 @@ stopLoading();
 
 function getAddress() {
   startLoading();
-  bitcoinWalletApi.getAddress({
+  bitcoincomLink.getAddress({
     protocol: getAddressProtocolEle.value,
   })
   .then(handleSuccess)
@@ -69,7 +69,7 @@ function sendAssets() {
     if (sendAssetsProtocolEle.value === 'SLP') {
       sendAssetArgs.assetId = sendAssetsAssetIdEle.value;
     }
-    bitcoinWalletApi.sendAssets(sendAssetArgs)
+    bitcoincomLink.sendAssets(sendAssetArgs)
     .then(handleSuccess)
     .catch(handleError);
   } catch (err) {
@@ -79,7 +79,7 @@ function sendAssets() {
 
 function payInvoice() {
   startLoading();
-  bitcoinWalletApi.payInvoice({
+  bitcoincomLink.payInvoice({
     url: payInvoiceUrlEle.value,
   })
   .then(handleSuccess)
@@ -88,7 +88,7 @@ function payInvoice() {
 
 function createToken() {
   startLoading();
-  bitcoinWalletApi
+  bitcoincomLink
   .createToken({
     name: createTokenNameEle.value,
     symbol: createTokenSymbolEle.value,
@@ -123,4 +123,4 @@ function syntaxHighlight(json) {
     });
 }
 
-console.log(bitcoinWalletApi.getWalletProviderStatus());
+console.log(bitcoincomLink.getWalletProviderStatus());

@@ -1,4 +1,4 @@
-# bitcoin-wallet-api package development
+# bitcoincom-link package development
 
 ## Installation
 

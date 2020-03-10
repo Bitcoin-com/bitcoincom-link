@@ -1,25 +1,25 @@
 {
-  "name": "bitcoin-wallet-api",
+  "name": "bitcoincom-link",
   "version": "0.1.10",
   "description": "",
-  "main": "./lib/bitcoin-wallet-api.min.js",
+  "main": "./lib/bitcoincom-link.min.js",
   "types": "./lib/index.d.ts",
   "scripts": {
     "start": "webpack --mode development --watch",
     "build": "webpack --mode development",
     "build-dist": "webpack --mode production --env.DISTRIBUTION=true",
     "dist": "yarn build-dist && yarn fix-bitcore",
-    "fix-bitcore": "sed -i '' 's/i.versionGuard(t._bitcoreCash),//g' lib/bitcoin-wallet-api.min.js"
+    "fix-bitcore": "sed -i '' 's/i.versionGuard(t._bitcoreCash),//g' lib/bitcoincom-link.min.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bitcoin-com/bitcoin-wallet-api.git"
+    "url": "git+https://github.com/bitcoin-com/bitcoincom-link.git"
   },
   "author": "",
   "bugs": {
-    "url": "https://github.com/bitcoin-com/bitcoin-wallet-api/issues"
+    "url": "https://github.com/bitcoin-com/bitcoincom-link/issues"
   },
-  "homepage": "https://developer.bitcoin.com/wallet-api",
+  "homepage": "https://developer.bitcoin.com/link",
   "devDependencies": {
     "@types/lodash-es": "^4.17.3",
     "@types/node": "^13.7.1",
