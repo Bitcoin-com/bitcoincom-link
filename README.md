@@ -6,15 +6,15 @@ In a browser - cdn [![](https://data.jsdelivr.com/v1/package/npm/bitcoincom-link
 
 Install via npm [![npm version](https://badge.fury.io/js/bitcoincom-link.svg)](https://badge.fury.io/js/bitcoincom-link)
 
-### [Getting started](https://developer.bitcoin.com/wallet-api/)
+### [Getting started](https://developer.bitcoin.com/bitcoincom-link/docs/getting-started/)
 
 ## Method definitions
 Standard protocol being defined as [BDIP-3](https://github.com/Bitcoin-com/BDIPs/blob/master/BDIPs/bdip-3.md)
 
-- [getAddress](https://developer.bitcoin.com/wallet-api/docs/get-address)
-- [sendAssets](https://developer.bitcoin.com/wallet-api/docs/send-assets)
-- [payInvoice](https://developer.bitcoin.com/wallet-api/docs/pay-invoice)
-- [createToken](https://developer.bitcoin.com/wallet-api/docs/create-token)
+- [getAddress](https://developer.bitcoin.com/bitcoincom-link/docs/get-address)
+- [sendAssets](https://developer.bitcoin.com/bitcoincom-link/docs/send-assets)
+- [payInvoice](https://developer.bitcoin.com/bitcoincom-link/docs/pay-invoice)
+- [createToken](https://developer.bitcoin.com/bitcoincom-link/docs/create-token)
 
 ### [Development](/docs/development.md)
 
