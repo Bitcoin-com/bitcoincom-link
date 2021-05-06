@@ -1,7 +1,8 @@
 declare enum PROTOCOL {
     BCH = "BCH",
     SLP = "SLP",
-    BTC = "BTC"
+    BTC = "BTC",
+    ETH = "ETH"
 }
 interface GetAccountInput {
     protocol: PROTOCOL;

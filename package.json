@@ -1,6 +1,6 @@
 {
   "name": "bitcoincom-link",
-  "version": "0.1.10",
+  "version": "0.2.0-beta02",
   "description": "",
   "main": "./lib/bitcoincom-link.min.js",
   "types": "./lib/index.d.ts",
@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/bitcoin-com/bitcoincom-link/issues"
   },
-  "homepage": "https://developer.bitcoin.com/link",
+  "homepage": "https://developer.bitcoin.com/bitcoincom-link/",
   "devDependencies": {
     "@types/lodash-es": "^4.17.3",
     "@types/node": "^13.7.1",
