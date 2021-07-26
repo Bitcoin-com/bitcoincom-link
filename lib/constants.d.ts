@@ -2,7 +2,9 @@ export declare enum METHOD {
     getAddress = "getAddress",
     sendAssets = "sendAssets",
     payInvoice = "payInvoice",
-    createToken = "createToken"
+    createToken = "createToken",
+    getInfo = "getInfo",
+    requestValue = "requestValue"
 }
 export declare const NO_PROVIDER: {
     type: string;

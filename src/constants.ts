@@ -3,6 +3,8 @@ export enum METHOD {
   sendAssets = 'sendAssets',
   payInvoice = 'payInvoice',
   createToken = 'createToken',
+  getInfo = 'getInfo',
+  requestValue = 'requestValue',
 }
 
 export const NO_PROVIDER = { type: 'NO_PROVIDER', description: 'Bitcoin.com Link provider not found.' };

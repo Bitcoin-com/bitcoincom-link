@@ -1,0 +1,1 @@
+{"version":3,"file":"getInfo.d.ts","sourceRoot":"","sources":["../../../src/mobile/methods/getInfo.ts"],"names":[],"mappings":"AAGA,UAAU,aAAa;IACrB,OAAO,EAAE,MAAM,CAAC;IAChB,QAAQ,EAAE,MAAM,CAAC;IACjB,SAAS,EAAE,MAAM,EAAE,CAAC;CACrB;AAED,MAAM,CAAC,OAAO,UAAU,OAAO,IAAI,OAAO,CAAC,aAAa,CAAC,CAIxD"}
