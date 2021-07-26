@@ -11,10 +11,11 @@ Install via npm [![npm version](https://badge.fury.io/js/bitcoincom-link.svg)](h
 ## Method definitions
 Standard protocol being defined as [BDIP-3](https://github.com/Bitcoin-com/BDIPs/blob/master/BDIPs/bdip-3.md)
 
-- [getAddress](https://developer.bitcoin.com/bitcoincom-link/docs/get-address)
-- [sendAssets](https://developer.bitcoin.com/bitcoincom-link/docs/send-assets)
-- [payInvoice](https://developer.bitcoin.com/bitcoincom-link/docs/pay-invoice)
-- [createToken](https://developer.bitcoin.com/bitcoincom-link/docs/create-token)
+- [getInfo](docs/methods/getInfo.md)
+- [getAddress](docs/methods/getAddress.md)
+- [sendAssets](docs/methods/sendAssets.md)
+- [payInvoice](docs/methods/payInvoice.md)
+- [createToken](docs/methods/createToken.md)
 
 ### [Development](/docs/development.md)
 
