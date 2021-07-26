@@ -1,7 +1,7 @@
 {
   "name": "bitcoincom-link",
-  "version": "0.2.0-beta02",
-  "description": "",
+  "version": "0.2.1-beta01",
+  "description": "Multi-provider interface for applications supporting BCH, SLP, BTC, ETH",
   "main": "./lib/bitcoincom-link.min.js",
   "types": "./lib/index.d.ts",
   "scripts": {
