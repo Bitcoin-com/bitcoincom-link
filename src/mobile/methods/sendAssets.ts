@@ -6,6 +6,7 @@ enum PROTOCOL {
   SLP = 'SLP',
   BTC = 'BTC',
   ETH = 'ETH',
+  ERC20 = 'ERC20',
 }
 
 interface SendAssetsInput {

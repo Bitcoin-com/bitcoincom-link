@@ -14,7 +14,7 @@ function getInfo(): Promise<GetInfoOutput>
 interface GetInfoOutput {
   version: string; // Version of the app
   platform: string; // iOS or Android version
-  protocols: string[]; // A list of available protocols (eg BCH/BTC/SLP/ETH)
+  protocols: string[]; // A list of available protocols (eg BCH/BTC/SLP/ETH/ERC20)
 }
 ```
 
