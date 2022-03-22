@@ -5,6 +5,7 @@ export enum METHOD {
   createToken = 'createToken',
   getInfo = 'getInfo',
   requestValue = 'requestValue',
+  requestWeb3Sign = 'requestWeb3Sign',
 }
 
 export const NO_PROVIDER = { type: 'NO_PROVIDER', description: 'Bitcoin.com Link provider not found.' };
