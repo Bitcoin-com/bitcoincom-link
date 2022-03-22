@@ -1,6 +1,6 @@
 {
   "name": "bitcoincom-link",
-  "version": "0.2.0-beta02",
+  "version": "0.3.0",
   "description": "",
   "main": "./lib/bitcoincom-link.min.js",
   "types": "./lib/index.d.ts",

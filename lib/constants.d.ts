@@ -4,7 +4,8 @@ export declare enum METHOD {
     payInvoice = "payInvoice",
     createToken = "createToken",
     getInfo = "getInfo",
-    requestValue = "requestValue"
+    requestValue = "requestValue",
+    requestWeb3Sign = "requestWeb3Sign"
 }
 export declare const NO_PROVIDER: {
     type: string;
