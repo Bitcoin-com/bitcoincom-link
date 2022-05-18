@@ -2,7 +2,6 @@ export enum METHOD {
   getAddress = 'getAddress',
   sendAssets = 'sendAssets',
   payInvoice = 'payInvoice',
-  createToken = 'createToken',
   getInfo = 'getInfo',
   requestValue = 'requestValue',
   requestWeb3Sign = 'requestWeb3Sign',

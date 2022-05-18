@@ -3,7 +3,6 @@ declare const Web4Bch: any;
 import getAddress from './methods/getAddress';
 import sendAssets from './methods/sendAssets';
 import payInvoice from './methods/payInvoice';
-import createToken from './methods/createToken';
 import { WalletProviderStatus } from '../constants';
 
 export function hasWeb4BchProvider() {
@@ -30,5 +29,4 @@ export default {
   getAddress,
   sendAssets,
   payInvoice,
-  createToken,
 };
