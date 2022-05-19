@@ -14,7 +14,6 @@ Standard protocol being defined as [BDIP-3](https://github.com/Bitcoin-com/BDIPs
 - [getAddress](https://developer.bitcoin.com/bitcoincom-link/docs/get-address)
 - [sendAssets](https://developer.bitcoin.com/bitcoincom-link/docs/send-assets)
 - [payInvoice](https://developer.bitcoin.com/bitcoincom-link/docs/pay-invoice)
-- [createToken](https://developer.bitcoin.com/bitcoincom-link/docs/create-token)
 
 ### [Development](/docs/development.md)
 
