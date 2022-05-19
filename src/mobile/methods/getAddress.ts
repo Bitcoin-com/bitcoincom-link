@@ -3,7 +3,6 @@ import { METHOD } from '../../constants';
 
 enum PROTOCOL {
   BCH = 'BCH',
-  SLP = 'SLP',
   BTC = 'BTC',
   ETH = 'ETH',
 }
