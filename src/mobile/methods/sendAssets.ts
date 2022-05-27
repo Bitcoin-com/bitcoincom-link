@@ -3,15 +3,14 @@ import { METHOD } from '../../constants';
 
 enum PROTOCOL {
   BCH = 'BCH',
-  SLP = 'SLP',
   BTC = 'BTC',
   ETH = 'ETH',
 }
 
 interface SendAssetsInput {
   to: string; // Address of the receiver of the assets to be sent
-  protocol: PROTOCOL; // BCH/SLP/BTC or any future protocol
-  assetId?: string; // Optional in the case of BCH or BTC. Required in the case of SLP, and will be token id
+  protocol: PROTOCOL; // BCH/BTC or any future protocol
+  assetId?: string; // Optional in the case of BCH or BTC.
   value: string; // The amount of coins or assets to be sent
   opReturn?: string[]; // arbitrary op return to attach to transaction
 }

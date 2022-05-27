@@ -207,11 +207,6 @@ function encodeScript(script: (number | number[])[]) {
   return buffer;
 }
 
-export function isSlpAddress(address: string): boolean {
-  const addressRegex = new RegExp('^(simpleledger:|slptest:|slpreg:)?(q|p)[a-z0-9]{41}$');
-  return addressRegex.test(address);
-}
-
 const customDescriptionRuleSet = {
   ...metadataRuleSets.description,
   rules: [
